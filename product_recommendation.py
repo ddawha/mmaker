@@ -13,6 +13,15 @@ def recommend_products(keywords):
     products = []
     for item in soup.select('.s-result-item'):
         title = item.select_one('h2 a span')
+        link = item.select_one('h2 a')
+
+        if title and link:
+            product = {
+                'title': title.get_text(),
+                'url': 'https://www.amazon.com' + link['href']
+            }
+            products.append(product)
+        
         if title:
             products.append(title.get_text())
 

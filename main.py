@@ -23,7 +23,13 @@ def main():
                 predictions = image_classification.classify_objects(image_path=image_path)
                 for each_prediction in predictions:
                     products = product_recommendation.recommend_products(each_prediction)
-                    print(products)
+                    try:
+                        print(products[0]['title'], " : ", products[0]['url'])
+                        print('\n')
+                    except Exception as e:
+                        logging.error(f"Prediction error encountered: {e}")
+                        print(f"Prediction error encountered: {e}")
+
     except Exception as e:
         logging.error(f"An error occurred: {e}")
         print(f"An error occurred: {e}")

@@ -19,5 +19,5 @@ def detect_objects(image_path):
     output_image_path = os.path.join("TrainingVideos/OutImages/", base_name_without_ext + "_detected.jpg")
 
     detections = detector.detectObjectsFromImage(input_image=image_path, output_image_path=output_image_path)    
-    print(detections)
+    print("start detection", detections, "end detection", '\n')
     return detections

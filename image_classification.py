@@ -9,6 +9,6 @@ def classify_objects(image_path):
     classifier.loadModel()
 
     predictions, probabilities = classifier.classifyImage(image_path, result_count=5)
-    for eachPrediction, eachProbability in zip(predictions, probabilities):
-        print(eachPrediction , " : " , eachProbability)
+    for each_prediction, each_probability in zip(predictions, probabilities):
+        print(each_prediction , " : " , each_probability, "%")
     return predictions, probabilities

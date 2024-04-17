@@ -1,0 +1,7 @@
+resnet50-19c8e357.pth
+retinanet_resnet50_fpn_coco-eeacb38b.pth
+myenv/
+TrainingVideos/
+__pycache__/
+app.log
+.DS_Store
